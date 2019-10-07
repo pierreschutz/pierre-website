@@ -9,7 +9,7 @@
       </v-col>
       <v-col>
         <h1 class="item-job-description">{{title}}</h1>
-        <p style="white-space: pre-wrap;">{{description}}</p>
+        <p style="white-space: pre-wrap;">{{'\n' + description}}</p>
         <v-chip
           v-for="k in keywordList"
           class="ma-2"

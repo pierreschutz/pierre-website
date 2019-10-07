@@ -279,9 +279,9 @@
                     source_link:"https://github.com/pierreschutz/ML_HKUST",
                     description_link:"https://www.kaggle.com/c/tmdb-box-office-prediction",
                     keywords:"Python, Machine Learning, Pandas, SkLearn, Data Science",
-                    description: "This project has been realised during the Machine Learning course final project in Hong Kong. " +
-                        "The project contains the data analysis, data preprocessing, feature engineering and selection. \n" +
-                        "It also contains multiple trials with different machine learning methods in order to build a model with the best performances."
+                    description: "- This project has been realised during the Machine Learning course final project in Hong Kong. \n" +
+                        "- The project contains the data analysis, data preprocessing, feature engineering and selection. \n" +
+                        "- It also contains multiple trials with different machine learning methods in order to build a model with the best performances."
 
                 },
                 {
