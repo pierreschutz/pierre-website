@@ -1,28 +1,42 @@
 <template>
-  <v-card :color="color" dark>
-    <v-list-item three-line>
-      <v-list-item-content class="align-self-start">
-        <v-list-item-title class="headline mb-2" v-text="title"></v-list-item-title>
-        <v-list-item-subtitle :v-text="location + ' bonjoru  ' +  date"></v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+  <v-card color="theme3" dark style="margin: 10px; color: black">
 
-    <v-list-item-avatar size="125" tile>
-      <v-img :src="img_src"></v-img>
-    </v-list-item-avatar>
+    <v-row>
+      <v-col cols="2">
+        <v-avatar size="120" style="margin-left: 10px">
+          <v-img :src="img_src"></v-img>
+        </v-avatar>
+      </v-col>
+      <v-col>
+        <h1 class="item-job-description">{{title}}</h1>
+        <h2 class="item-company"><a :href="link" target="_blank">{{company}}</a> {{' -- ' + location + ' -- (' + date + ')'}}</h2>
+        <p style="white-space: pre-wrap;">{{description}}</p>
+      </v-col>
+    </v-row>
+
   </v-card>
 </template>
 
 <script>
-export default {
-  props: {
-    color: String,
-    img_src: String,
-    title: String,
-    description: String,
-    date: String,
-    location: String
-  }
-};
+    export default {
+        props: {
+            link: String,
+            color: String,
+            img_src: String,
+            title: String,
+            company: String,
+            description: String,
+            date: String,
+            location: String
+        }
+    };
 </script>
+
+<style scoped>
+
+  .item-company {
+    margin-top: 10px;
+    font-size: medium;
+  }
+</style>
 
