@@ -1,6 +1,14 @@
-# pierre-website
+# Pierre Schutz - Website
 
-> My personnal portfolio
+This repository contains the Nuxt directory of my personnal website hosted on https://pierreschutz.github.io :
+
+![](screenshot_pierre_website.png)
+
+This website has been in 24 hours the 7 October 2019.
+
+It has been made from scratch using Vue.js and Nuxt.js
+
+Feel free to use it as a template for your own website !
 
 ## Build Setup
 
