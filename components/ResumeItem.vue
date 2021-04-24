@@ -1,7 +1,7 @@
 <template>
-  <v-card color="theme3" dark style="margin: 10px; color: black">
+  <v-card color="rgba(0, 0, 0, 0.6)" style="margin: 10px;">
 
-    <v-row>
+    <v-row class="item-resume">
       <v-col cols="2">
         <v-avatar size="120" style="margin-left: 10px">
           <v-img :src="img_src"></v-img>
@@ -9,8 +9,9 @@
       </v-col>
       <v-col>
         <h1 class="item-job-description">{{title}}</h1>
-        <h2 class="item-company"><a :href="link" target="_blank">{{company}}</a> {{' -- ' + location + ' -- (' + date + ')'}}</h2>
-        <p style="white-space: pre-wrap;">{{description}}</p>
+        <h2 class="item-company"><a :href="link" target="_blank">{{company}}</a></h2>
+        <h2 class="item-company">{{location}}</h2>
+        <h2 class="item-company">{{date}}</h2>
       </v-col>
     </v-row>
 

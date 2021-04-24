@@ -12,6 +12,7 @@
         <p style="white-space: pre-wrap;">{{'\n' + description}}</p>
         <v-chip
           v-for="k in keywordList"
+          v-bind:key="k"
           class="ma-2"
           color="primary"
         >{{k}}</v-chip>
