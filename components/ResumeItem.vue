@@ -1,5 +1,5 @@
 <template>
-  <v-card color="rgba(0, 0, 0, 0.6)" style="margin: 10px;">
+  <v-card color="rgba(0, 0, 0, 0.6)" dark style="margin: 10px;">
 
     <v-row class="item-resume">
       <v-col cols="2">

@@ -2,7 +2,7 @@
   <v-layout column justify-center align-center>
     <v-flex xs12 sm8 md6>
       <!-- Picture, name and description -->
-      <v-card class="main-card" color="black">
+      <v-card class="main-card" color="rgba(0, 0, 0, 0.8)">
         <v-img class="my-img" height="400" src="/photo_berlin_pierre.jpg"></v-img>
 
         <v-card-title style="font-size: 2.5em">{{nameTitle}}</v-card-title>
@@ -129,7 +129,10 @@
               :color="item.color"
               :source_link="item.source_link"
               :description_link="item.description_link"
+              :project_link="item.project_link"
+              :report_link="item.report_link"
               :img_src="item.img_src"
+              :date="item.date"
               :title="item.title"
               :description="item.description"
               :keywords="item.keywords"
@@ -174,25 +177,29 @@
       experience: [
         {
           link: "https://amazon.com",
-          img_src: ""
+          title: "Software Engineer Intern",
+          img_src: "/resume/amazon_icon.png",
+          company: "Amazon",
+          date: "October 2020 - February 2021",
+          location: "Kirchberg, Luxembourg"
         },
         {
           link: "https://inpher.io",
-          img_src: "/pierre-website_experience_2.png",
-          title: "Software Developer Intern",
+          img_src: "/resume/inpher_icon.png",
+          title: "Software Developer",
           company: "Inpher",
-          date: "June 2019 - August 2019",
-          location: "New York, USA",
+          date: "Intern (June 2019 - August 2019), Part-Time (October 2019 - July 2020)",
+          location: "New York, USA / Lausanne, Switzerland",
           description: "- Build a configuration's files manager interface that helps clients to create, read, edit and delete configurations file on their machine (Using Vue.js, Javascript, Node.js, Docker).\n" +
             "- Acquire working knowledge about secret computing and privacy-preserving machine learning."
 
         },
         {
           link: "https://je.epfl.ch",
-          img_src: "/pierre-website_experience_1.png",
-          title: "Technical Consultant, Software Engineer",
+          img_src: "/resume/je_epfl_icon.png",
+          title: "Technical Consultant, Software Developer",
           company: "Junior Enterprise EPFL",
-          date: "March 2018 - Present",
+          date: "March 2018 - February 2020",
           location: "Lausanne, Switzerland",
           description: "- Consult on IT projects about databases, publish-subscribe pattern\n" +
             "systems, mobile applications, e-commerce applications, SDK, web API.\n" +
@@ -207,7 +214,7 @@
 
         {
           link: "https://epfl.ch",
-          img_src: "/pierre-website_experience_3.png",
+          img_src: "/resume/epfl_icon.png",
           title: "Teaching Assistant",
           company: "Swiss Federal Institute of Technology (EPFL)",
           date: "September 2017 - June 2018",
@@ -219,18 +226,18 @@
       education: [
         {
           link: "https://epfl.ch",
-          img_src: "/pierre-website_education_1.png",
-          title: "Master of Science in Data Science",
+          img_src: "/resume/epfl_icon.png",
+          title: "Master of Science, Data Science",
           company: "Swiss Federal Institute of Technology (EPFL)",
-          date: "September 2019 - July 2021",
+          date: "September 2019 - March 2022",
           location: "Lausanne, Switzerland",
           description: "- Minor in Management, Technology & Entrepreneurship.\n" +
             "- Semester 1 : Machine Learning, Applied Data Analysis, Natural Language Processing, Principle of Finance, Microeconomics, Project Management & Risk Analysis."
 
         },
         {
-          link: "https://www.ust.hk",
-          img_src: "/pierre-website_education_2.png",
+          link: "https://hkust.edu.hk/",
+          img_src: "/resume/hkust_icon.png",
           title: "Exchange Program, Computer Science",
           company: "Hong Kong University of Science And Technology",
           date: "September 2018 - June 2019",
@@ -243,8 +250,8 @@
 
         {
           link: "https://epfl.ch",
-          img_src: "/pierre-website_education_1.png",
-          title: "Bachelor of Science in Communication Systems",
+          img_src: "/resume/epfl_icon.png",
+          title: "Bachelor of Science, Communication Systems",
           company: "Swiss Federal Institute of Technology (EPFL)",
           date: "September 2016 - August 2019",
           location: "Lausanne, Switzerland",
@@ -258,10 +265,10 @@
       leadership: [
         {
           link: "https://bsaepfl.ch",
-          img_src: "/pierre-website_leadership_1.png",
-          title: "Co-Founder, Vice-President",
+          img_src: "/resume/bsa_icon.png",
+          title: "Co-Founder",
           company: "Blockchain Student Association EPFL",
-          date: "September 2019 - Present",
+          date: "September 2018 - October 2020",
           location: "Lausanne, Switzerland",
           description: "- Co-found a student organization at EPFL that shares knowledge, issues, and develops projects in the field of distributed technologies for the university community.\n" +
             "- Build the administration structure of a new organisation\n" +
@@ -271,7 +278,7 @@
         },
         {
           link: "https://coaching.epfl.ch",
-          img_src: "/pierre-website_leadership_2.png",
+          img_src: "/resume/coaching_icon.png",
           title: "Coach",
           company: "Coaching IC EPFL",
           date: "September 2017 - July 2018",
@@ -289,30 +296,39 @@
 
       projects: [
         {
+          title: "World Map Visualisation",
+          date: "2021",
+          img_src: "/resume/world_map_icon.png",
+          project_link: "/map",
+          keywords: "Javascript, D3, Web",
+          description: "Fun personal project to train using d3.js. Built an interactive world map visualisation."
+        },
+        {
+          title: "Chicago Crime Data visualisation",
+          date: "2020",
+          img_src: "/resume/chicago_crime_icon.png",
+          project_link: "https://pierreschutz.github.io/dada-story",
+          source_link: "https://github.com/pierreschutz/ADA_Project/",
+          keywords: "Data Analysis, Web, Chicago crime, Python, Machine Learning, EPFL, Team work",
+          description: "Group work for the Applied Data Analysis course. " +
+            "Analysis of the kaggle's dataset containing 20 years of crime in Chicago. " +
+            "Data preprocessing, analysis, and visual presentation in a data story. "
+        },
+        {
           title: "DAppSter : Decentralized File Sharing System using Ethereum and BitTorrent",
-          img_src: "/pierre-website_project_5.png",
+          date: "2019",
+          img_src: "/resume/dappster_icon.png",
           source_link: "https://github.com/stang-l/DAppSter",
           keywords: "Java, Solidity, Ethereum, BitTorrent, Research, File sharing, Tracker",
-          description: "- This application has been realised during my exchange year in Hong Kong. \n" +
-            "- Develop a decentralized file sharing system that uses Ethereum blockchain to replace centralized trackers in BitTorrent protocol \n" +
+          description: "- Decentralized file sharing system that uses Ethereum blockchain to replace centralized trackers in BitTorrent protocol \n" +
             "- Enables a more robust and decentralized bootstrapping and provide censorship resistant tracker. \n" +
             "- Collaborate as the first author on an ongoing research paper."
 
         },
         {
-          title: "ECommerce Android Mobile Application",
-          img_src: "/pierre-website_project_3.png",
-          source_link: "https://github.com/pierreschutz/Firebase-Kotlin-Android-Simple-Read-Write",
-          description: "- This mobile application has been realised with the Junior Enterprise EPFL for a private company. \n" +
-            "- The application provides basic e-commerce application functions such as a cart, favorites, shop, etc. \n" +
-            "- The user is able to order from the application, schedule repair appointments, order customisable phone cases, etc. \n" +
-            "- Please find in source code an open-source component made to use Firebase real time database for appointment.",
-          keywords: "Kotlin, Mobile application, E-Commerce, Android, Junior Enterprise"
-
-        },
-        {
           title: "Kaggle: TMDB Box Office prediction Competition",
-          img_src: "/pierre-website_project_7.png",
+          date: "2019",
+          img_src: "/resume/boxoffice_icon.png",
           source_link: "https://github.com/pierreschutz/ML_HKUST",
           description_link: "https://www.kaggle.com/c/tmdb-box-office-prediction",
           keywords: "Python, Machine Learning, Pandas, SkLearn, Data Science",
@@ -322,18 +338,9 @@
 
         },
         {
-          title: "Alpano: Alps panorama drawer",
-          img_src: "/pierre-website_project_1.png",
-          description_link: "https://cs108.epfl.ch/archive/17/p/00_introduction.html",
-          description: "- This application has been realised during the course of Oriented-Object Programming at EPFL (as a Student). \n" +
-            "- It consists of building a Alps panorama renderer from scratch in order to provide a landscape view of " +
-            "what you would see as well as the name of the summits visible when you provide GPS location in the Swiss Alps. ",
-          keywords: "Java, System Design, OOP, Drawer"
-
-        },
-        {
           title: "Gameboj: Nintendo GameBoy Emulator",
-          img_src: "/pierre-website_project_2.png",
+          date: "2018",
+          img_src: "/resume/gameboy_icon.png",
           description_link: "https://cs108.epfl.ch/archive/18/p/00_introduction.html",
           description: "- This application has been realised during the courses of Oriented-Object Programming at EPFL (as a Teaching Assistant). \n" +
             "- It consists of building an Game Boy emulator reproducing virtually all the hardware of the original Game Boy. At the end, the program is able to read Cartridge designed for the Game Boy.",
@@ -341,19 +348,9 @@
 
         },
         {
-          title: "Blockchain Society Website",
-          img_src: "/pierre-website_project_4.png",
-          source_link: "",
-          description_link: "https://blockchainsociety.ch/",
-          description: "- Build the website of an organisation I am taking part during my free time (Blockchain Society). \n" +
-            "- Design and implement the stucture of the website on Wordpress.",
-          keywords: "Wordpress, Web"
-
-        },
-
-        {
           title: "Pong Game Nios II Assembly",
-          img_src: "/pierre-website_project_6.png",
+          date: "2018",
+          img_src: "/resume/pong_icon.png",
           source_link: "https://github.com/pierreschutz/Pong-NiosII",
           description_link: "https://gecko-wiki.ti.bfh.ch/geck4education_epfl:start",
           keywords: "Assembly, Game, Nios II",
@@ -363,8 +360,16 @@
             "- Collaborate as the first author on an ongoing research paper."
 
         },
-
-
+        {
+          title: "Alpano: Alps panorama drawer",
+          date: "2017",
+          img_src: "/resume/alpano_icon.png",
+          description_link: "https://cs108.epfl.ch/archive/17/p/00_introduction.html",
+          description: "- This application has been realised during the course of Oriented-Object Programming at EPFL (as a Student). \n" +
+            "- It consists of building a Alps panorama renderer from scratch in order to provide a landscape view of " +
+            "what you would see as well as the name of the summits visible when you provide GPS location in the Swiss Alps. ",
+          keywords: "Java, System Design, OOP, Drawer"
+        },
       ],
 
     }),

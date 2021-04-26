@@ -10,7 +10,7 @@
     >
       <v-list>
         <v-list-item
-          v-for="(item, i) in items"
+          v-for="(item, i) in drawerItems"
           :key="i"
           :to="item.to"
           router
@@ -52,22 +52,17 @@
 
       <v-spacer/>
 
-      <!-- LinkedIn Button -->
-      <v-btn icon
-             href="https://linkedin.com/in/pierreschutz"
-             target="_blank"
+      <!-- Social medias button -->
+      <v-btn
+        icon
+        v-for="(item, i) in buttonItems"
+        :key="i"
+        target="_blank"
+        :href="item.to"
       >
-        <v-icon>mdi-linkedin</v-icon>
+        <v-icon>{{item.icon}}</v-icon>
       </v-btn>
 
-
-      <!-- GitHub Button -->
-      <v-btn icon
-             href="https://github.com/pierreschutz"
-             target="_blank"
-      >
-        <v-icon>mdi-github</v-icon>
-      </v-btn>
 
     </v-app-bar>
 
@@ -93,16 +88,21 @@
         clipped: false,
         drawer: false,
         fixed: false,
-        items: [
+        buttonItems: [
+          {
+            icon: "mdi-linkedin",
+            to:"https://linkedin.com/in/pierreschutz"
+          },
+          {
+            icon:"mdi-github",
+            to:"https://github.com/pierreschutz"
+          }
+        ],
+        drawerItems: [
           {
             icon: "mdi-apps",
             title: "Welcome",
             to: "/"
-          },
-          {
-            icon: "mdi-chart-bubble",
-            title: "Inspire",
-            to: "/inspire"
           },
           {
             icon: "mdi-earth",
@@ -112,9 +112,8 @@
         ],
         right: true,
         rightDrawer: false,
-        title: "My Awesome Portfolio (Pierre Schutz)",
+        title: "My Awesome Portfolio - Pierre Schutz",
         copyright: "© Pierre Schutz 2021"
-
 
       };
     }
@@ -140,7 +139,7 @@
   }
 
   .app {
-    background-image: url("static/background_night_1.svg");
+    background-image: url("static/background/background_night_1.svg");
     background-size: 250% auto;
     background-repeat: no-repeat;
     background-position-x: center;

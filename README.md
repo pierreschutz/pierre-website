@@ -51,4 +51,4 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 Vectorizing the background:
 
 - Background image: https://pxhere.com/en/photo/1200487
-- Free image vectorizer: https://www.autotracer.org/
+- 1 Credit Free image vectorizer: https://www.vectorizer.io/ (New IP = New credit...)
